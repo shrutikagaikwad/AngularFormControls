@@ -1,0 +1,11 @@
+<div>
+  <div class="control-label">
+    <label>{{label}} <span class="required" *ngIf="isRequired">*</span></label>
+  </div>
+  <div>
+    <input type="text" [formControl]="result" class="form-control" />
+    <div class="error" *ngIf="(result.dirty || result.touched) && result.hasError('required')">
+      This field is required
+    </div>
+  </div>
+</div>
